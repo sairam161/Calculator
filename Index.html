@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin: 0px;
+        }
+        body{
+            width:100%;
+            height:600px;
+            background-color:lightpink;
+        }
+        #contner{
+            position:absolute;
+            top:200px;
+            left:600px;
+            background-color:lightblue;
+            border-radius: 3px;
+            border-color: red;
+        }
+        input{
+            font-size: 30px;
+            box-sizing: 100px;
+            width:50px;
+            height:50px;
+            color:brown;
+            word-spacing: 3px;
+            border: none;
+        }
+        #txt
+        {
+            width:300px;
+            background-color: aqua;
+            border:none;   
+        }
+        #cler{
+            width:120px;
+        }
+        #equl{
+            width:120px;
+        }
+        #cal{
+            font-size: 250px;
+           margin-top:200px;
+           z-index: index 2;
+        }
+        .a{
+            margin-left:15px;
+            border-style: ridge;
+            border-radius: 5px;
+            background-color:linear graduent black white;
+        }
+    </style>
+</head>
+<body >
+    <div id="contner">
+           <form id="cform" onclick="fun()">
+            <input type="text" id="txt" name="answer">
+            <br><br>
+            <input class="a" type="button" value="1" onclick="cform.answer.value +='1'">
+            <input class="a" type="button" value="2" onclick="cform.answer.value +='2'">
+            <input class="a" type="button" value="3" onclick="cform.answer.value +='3'">
+            <input class="a" type="button" value="+" onclick="cform.answer.value +='+'">
+            <br><br>
+            <input class="a" type="button" value="4" onclick="cform.answer.value +='4'">
+            <input class="a" type="button" value="5" onclick="cform.answer.value +='5'">
+            <input class="a" type="button" value="6" onclick="cform.answer.value +='6'">
+            <input class="a" type="button" value="-" onclick="cform.answer.value +='-'">
+            <br><br>
+            <input class="a" type="button" value="7" onclick="cform.answer.value +='7'">
+            <input class="a" type="button" value="8" onclick="cform.answer.value +='8'">
+            <input class="a" type="button" value="9" onclick="cform.answer.value +='9'">
+            <input class="a" type="button" value="*" onclick="cform.answer.value +='*'">
+            <br><br>
+            <input class="a" type="button" value="/" onclick="cform.answer.value +='/'">
+            <input class="a" type="button" value="0" onclick="cform.answer.value +='0'">
+            <input class="a" type="button" value="." onclick="cform.answer.value +='.'">
+            <input class="a" type="button" value="%" onclick="cform.answer.value +='%'">
+            <br><br>
+            <input type="button" value="Clear" id="cler" onclick="cform.answer.value= ' '">
+            <input type="button" value="=" id="equl" onclick="cform.answer.value=eval(cform.answer.value)">
+            <input type="botton" value="<---" id="remove" onclick="cform.value=eval(cform.answer.value)">
+           </form>
+    </div>
+    <h1 id="cal">Calculator</h1>
+    <script>
+        function fun()
+        {
+            document.getElementById("remove").removeAttribute("style")
+        }
+    </script>
+</body>
+</html>
